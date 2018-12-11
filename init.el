@@ -14,6 +14,8 @@
 
 ;; 添加包
 (defvar my/packages '(
+                evil
+                undo-tree
                 company
                 hungry-delete
                 swiper
@@ -43,6 +45,10 @@
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; 开启 Evil
+(require 'evil)
+(evil-mode 1)
 
 ;; swiper 配置
 (ivy-mode 1)
@@ -103,6 +109,7 @@
 
 ;; 光标
 (setq-default cursor-type 'bar)
+(setq evil-insert-state-cursor 'bar)
 
 ;; 禁止备份文件（xx~），备份文件不利于版本管理
 (setq make-backup-files nil)
