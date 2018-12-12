@@ -1,5 +1,22 @@
 ; 宋坤的配置
 
+;;(setq url-proxy-services
+;;   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+;;     ("http" . "127.0.0.1:3132")
+;;     ("https" . "127.0.0.1:3132")))
+
+;; C-x C-f 目录
+;;(setq default-directory "D:/")
+
+;; 解决 windows 卡顿
+(when (eq system-type 'windows-nt)
+  (setq gc-cons-threshold (* 512 1024 1024))
+  (setq gc-cons-percentage 0.5)
+  (run-with-idle-timer 5 t #'garbage-collect)
+  (setq garbage-collection-messages t))
+
+(setq inhibit-compacting-font-caches t)
+
 ;; 包管理器
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
