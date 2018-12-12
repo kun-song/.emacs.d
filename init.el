@@ -2,18 +2,19 @@
 
 ;; 包管理器
 (require 'package)
-(package-initialize)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
                          ("melpa" . "http://melpa.org/packages/")
                          ("melpa-stable" . "http://stable.melpa.org/packages/"))
- package-archive-priorities '(("melpa-stable" . 1)))
+      package-archive-priorities '(("melpa-stable" . 1)))
+(package-initialize)
 
 ;; cl - Common Lisp Extension
 (require 'cl)
 
 ;; 添加包
 (defvar my/packages '(
+                ensime
                 evil
                 undo-tree
                 company
@@ -46,7 +47,7 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; 开启 Evil
+;; 开启 Evili
 (require 'evil)
 (evil-mode 1)
 
@@ -145,7 +146,6 @@
 ;;(global-set-key (kbd "C-c C-v") 'find-variable)
 ;;(global-set-key (kbd "C-c C-k") 'find-function-on-key)
 
-
 ;; global variables
 (setq
  create-lockfiles nil
@@ -160,12 +160,8 @@
  tab-width 4
  c-basic-offset 4)
 
-;; modes
-(electric-indent-mode 0)
-
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
-
 
 (when (not package-archive-contents)
   (package-refresh-contents)
