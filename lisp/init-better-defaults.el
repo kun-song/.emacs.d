@@ -58,6 +58,11 @@
 ;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
 (set-face-attribute 'default nil :height 160)
 
+(setq-default fill-column 80)
+
+;; 关闭声音提示
+(setq ring-bell-function 'ignore)
+
 ;; global variables
 (setq
  create-lockfiles nil

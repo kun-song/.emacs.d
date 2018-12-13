@@ -48,4 +48,19 @@
 
 (setq package-selected-packages sk/packages)
 
+;; 开启 Evil
+(require 'evil)
+(evil-mode 1)
+(setq evil-insert-state-cursor 'bar)
+
+;; 括号补全
+(require 'smartparens-config)
+(smartparens-global-mode t)
+
+;; swiper
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+
+
 (provide 'init-packages)

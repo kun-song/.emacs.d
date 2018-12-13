@@ -5,26 +5,16 @@
 
 (require 'init-packages)
 (require 'init-better-defaults)
-(require 'init-swiper)
 (require 'init-ui)
 (require 'init-keybindings)
 (require 'init-custom)
 
-;; 开启 Evil
-(require 'evil)
-(evil-mode 1)
 
 ;; ace 分屏跳转
 (global-set-key (kbd "M-o") 'ace-window)
 
-;; 括号补全
-(require 'smartparens-config)
-(smartparens-global-mode t)
-
 ;; 全局自动补全
 (global-company-mode t)
-
-(setq evil-insert-state-cursor 'bar)
 
 ;; 文档语法高亮
 (require 'org)
