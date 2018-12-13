@@ -17,25 +17,6 @@
 
 (setq inhibit-compacting-font-caches t)
 
-
-;; 关闭默认启动提示
-(setq inhibit-startup-screen t)
-
-;; 启动全屏
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
-
-;; 显式行号
-(global-linum-mode t)
-
-;; 显式列号
-(column-number-mode t)
-
-;; 去掉工具栏
-(tool-bar-mode -1)
-
-;; 去掉侧滑栏
-(scroll-bar-mode -1)
-
 ;; 禁止备份文件（xx~），备份文件不利于版本管理
 (setq make-backup-files nil)
 
@@ -51,14 +32,9 @@
 (setq recentf-max-menu-items 25)
 ;;(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
-;; 高亮当前行
-(global-hl-line-mode 1)
-
 ;; 更改显示字体大小 16pt
 ;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
 (set-face-attribute 'default nil :height 160)
-
-(setq-default fill-column 80)
 
 ;; 关闭声音提示
 (setq ring-bell-function 'ignore)

@@ -9,16 +9,11 @@
 (require 'init-keybindings)
 (require 'init-custom)
 
-
 ;; ace 分屏跳转
 (global-set-key (kbd "M-o") 'ace-window)
 
 ;; 全局自动补全
 (global-company-mode t)
-
-;; 文档语法高亮
-(require 'org)
-(setq org-src-fontify-natively t)
 
 ;; 自动匹配括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)

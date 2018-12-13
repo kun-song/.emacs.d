@@ -54,7 +54,6 @@
 (setq evil-insert-state-cursor 'bar)
 
 ;; 括号补全
-(require 'smartparens-config)
 (smartparens-global-mode t)
 
 ;; swiper
