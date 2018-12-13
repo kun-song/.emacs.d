@@ -1,4 +1,8 @@
-;; 关闭默认启动提示
+;; 加载主题
+(add-to-list 'sk/packages 'spacemacs-theme)
+(load-theme 'spacemacs-dark t)
+
+;; 关闭启动提示
 (setq inhibit-startup-screen t)
 
 ;; 启动全屏
@@ -19,14 +23,14 @@
 ;; 高亮当前行
 (global-hl-line-mode 1)
 
-;; 加载主题
-(add-to-list 'sk/packages 'spacemacs-theme)
-(load-theme 'spacemacs-dark t)
-
 (setq-default fill-column 80)
 
 ;; 文档语法高亮
 (require 'org)
 (setq org-src-fontify-natively t)
+
+;; 光标形状
+(setq-default cursor-type 'bar)
+
 
 (provide 'init-ui)

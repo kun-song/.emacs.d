@@ -23,9 +23,6 @@
 ;; 防止出现 auto-save-list 文件夹
 (setq auto-save-default nil)
 
-;; 光标形状
-(setq-default cursor-type 'bar)
-
 ;; 最近打开文件
 (require 'recentf)
 (recentf-mode 1)  ;; 1 == t
