@@ -36,6 +36,10 @@
 ;; 关闭声音提示
 (setq ring-bell-function 'ignore)
 
+;; 透明
+(set-frame-parameter (selected-frame) 'alpha '(75 50))
+(add-to-list 'default-frame-alist '(alpha 85 50))w
+
 ;; global variables
 (setq
  create-lockfiles nil
